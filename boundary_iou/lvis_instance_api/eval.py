@@ -573,6 +573,7 @@ class LVISEval:
                 area_rng = "all"
 
             print(template.format(title, _type, iou, area_rng, max_dets, cat_group_name, value))
+        print(f"copypaste: AP,AP50,AP75,APs,APm,APl: {self.results['AP']:.3f},{self.results['AP50']:.3f},{self.results['AP75']:.3f},{self.results['APs']:.3f},{self.results['APm']:.3f},{self.results['APl']:.3f}")
 
     def get_results(self):
         if not self.results:

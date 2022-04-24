@@ -547,6 +547,7 @@ class COCOeval:
         elif iouType == 'keypoints':
             summarize = _summarizeKps
         self.stats = summarize()
+        print(f"copypaste: AP,AP50,AP75,APs,APm,APl: {self.stats[0]:.3f},{self.stats[1]:.3f},{self.stats[2]:.3f},{self.stats[3]:.3f},{self.stats[4]:.3f},{self.stats[5]:.3f}")
 
     def __str__(self):
         self.summarize()
